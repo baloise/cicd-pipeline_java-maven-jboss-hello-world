@@ -1,3 +1,4 @@
+@Library('sharedlib')
 pipeline {
     agent any
 
@@ -9,7 +10,7 @@ pipeline {
     stages {
         stage("Build") {
             steps {
-              // Perform maven build and upload war-file to nexus here
+              echo(greet("private cloud"))
             }
         }
     }
