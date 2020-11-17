@@ -11,6 +11,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: dump env
-      run: env
+    - name: notify jenkins
+      run: curl https://jenkinsbaloise.hclcnlabs.com/git/notifyCommit?url=$GITHUB_SERVER_URL/$GITHUB_REPOSITORY.git
