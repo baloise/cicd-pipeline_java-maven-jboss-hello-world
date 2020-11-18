@@ -1,4 +1,4 @@
-@Library('sharedlib@Feat/Maven') _
+@Library('sharedlib@cc41158e0a0728cd02a86868039edb095572d557') _
 pipeline {
     agent any
 
