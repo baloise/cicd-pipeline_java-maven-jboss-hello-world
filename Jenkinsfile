@@ -1,4 +1,4 @@
-@Library('sharedlib') _
+@Library('sharedlib@Feat/Maven') _
 pipeline {
     agent any
 
@@ -12,10 +12,10 @@ pipeline {
 		stage("Maven Build") {
 			steps {
 				echo(greet("private sunshine"))
-				mvn("package -DskipTests=true")				 
 				script {
+					mvn("package -DskipTests=true")				 
 				}
 			}
 		}
     }
-}$
+}
