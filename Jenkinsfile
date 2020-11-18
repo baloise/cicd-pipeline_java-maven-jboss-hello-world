@@ -1,4 +1,4 @@
-@Library('sharedlib') _
+@Library('sharedlib@Feat/Maven') _
 pipeline {
     agent any
 
@@ -12,12 +12,10 @@ pipeline {
 		stage("Maven Build") {
 			steps {
 				echo(greet("private sunshine"))
+				mvn("package -DskipTests=true")				 
 				script {
-					// TODO wrap this in a library call ( use docker container )
-					// don't call sh directly
-					sh "mvn package -DskipTests=true"
 				}
 			}
 		}
     }
-}
+}$
