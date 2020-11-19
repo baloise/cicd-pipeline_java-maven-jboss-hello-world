@@ -1,4 +1,4 @@
-@Library('sharedlib@2b33d8984171f6b216909eac7103d76c45985fa0') _
+@Library('sharedlib') _
 pipeline {
     agent any
 
